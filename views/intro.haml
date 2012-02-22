@@ -1,19 +1,22 @@
 %section.slide
   %h1
-    Sinatra - Deck.js Song
+    Geek slideshows 
   %p
-    A suggestion from @vzmind
+    A Sinatra - Deck.js song improvised by @vzmind
 %section.slide
-  %h2 How to host your own slide manager 
+  %h2 Host ur slideshows
   %ol
     %li
       %h3 Copy that Github repo
-      %p git clone git@github.com:vzmind/personal-deckjs.git
+      %p git clone git@github.com:vzmind/sinatra-deckjs.git
     %li
-      %h3 Deploy it on heroku
-      %p you know the usual git push heroku :)
+      %h3 Deploy it on Heroku
+      %p You know the usual :
+      %pre
+        %code
+          git push heroku master
 %section.slide
-  %h2 How to add slides
+  %h2 Create your first slideshow
   %ol
     %li
       %h3 Simply add a new listner to deck-song.rb 
@@ -24,8 +27,11 @@
     %li
       %h3 Create a file my_new_song.haml in views
       %p You can start editing your slideshow
+      %pre
+        %code
+          = "%li\n %h3 slide title\n %p description of my slide"
 %section.slide
-  %h2 Customize your slideshow
+  %h2 Add slides and customize
   %ol
     %li
       %h3 A section tag is a slide
@@ -33,10 +39,24 @@
     %li
       %h3 Customize the introduction.css if needed
       %p It's already coming with a basic shadowing style.
+%section.slide
+  %h2 Advanced singer ?
+  %ol
     %li
-      %h3 If you are more advanced
-      %p change the transition js file
+      %h3 Tweak the transitions in layout.haml
+      %p Change the transition js file from assets/deck.js/themes/transition
     %li
-      %h3 Choose Themes
-      %p Try to pick an other theme from the deck.js folder
+      %h3 Tweaks Themes
+      %p Try to pick an other theme from assets/deck.js/themes/style
+    %li
+      %h3 Want even more ?
+      %p
+        check 
+        %a{:href => 'http://imakewebthings.github.com/deck.js/'}
+          deck.js
+        and 
+        %a{:href => "http://sinatrarb.com"}
+          sinatra
+
+
 
