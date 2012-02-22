@@ -1,0 +1,36 @@
+!!!
+%html{:lang => "en"}
+  %head
+    %meta{:charset => "utf-8"}
+    %meta{:content => "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"}
+    %title Heroku ecosystem presentation
+    %meta{:content => "Heroku Rails pesentations for Tquila Labs", :name => "description"}
+    %meta{:content => "width=1024, user-scalable=no", :name => "viewport"}
+    / Core and extension CSS files
+    %link{:href => "deck.js/core/deck.core.css", :rel => "stylesheet"}
+    %link{:href => "deck.js/extensions/goto/deck.goto.css", :rel => "stylesheet"}
+    %link{:href => "deck.js/extensions/menu/deck.menu.css", :rel => "stylesheet"}
+    %link{:href => "deck.js/extensions/navigation/deck.navigation.css", :rel => "stylesheet"}
+    %link{:href => "deck.js/extensions/status/deck.status.css", :rel => "stylesheet"}
+    %link{:href => "deck.js/extensions/hash/deck.hash.css", :rel => "stylesheet"}
+    / Theme CSS files
+    %link#style-theme-link{:href => "deck.js/themes/style/web-2.0.css", :rel => "stylesheet"}
+    %link#transition-theme-link{:href => "deck.js/themes/transition/horizontal-slide.css", :rel => "stylesheet"}
+    %script{:src => "deck.js/modernizr.custom.js"}
+    %link{:href => "theme/introduction.css", :rel => "stylesheet"}
+  %body.introduction
+    %header
+    %article.deck-container.on-slide-0.on-slide-title-slide
+      = yield
+      %a.deck-prev-link{:href => "#", :title => "Previous"} ←
+      %a.deck-next-link{:href => "#", :title => "Next"} →
+  %script{:src => "deck.js/jquery-1.7.min.js"}
+  %script{:src => "deck.js/core/deck.core.js"}
+  %script{:src => "deck.js/extensions/hash/deck.hash.js"}
+  %script{:src => "deck.js/extensions/menu/deck.menu.js"}
+  %script{:src => "deck.js/extensions/goto/deck.goto.js"}
+  %script{:src => "deck.js/extensions/menu/deck.status.js"}
+  %script{:src => "deck.js/extensions/navigation/deck.navigation.js"}
+  :javascript
+    $.deck('.slide');
+
